@@ -7,6 +7,9 @@ You will see the instructions once you run the script.
 
 Requisites:
   .The user must have Python 3 installed.
+  
   .The user must have VScode installed.
+  
   .The user must have .NET installed.
+  
   .Windows only.
