@@ -14,3 +14,5 @@ Requisites:
   .The user must have .NET installed.
   
   .Windows only.
+  
+To run the script, open your cmd. then go to the directory where the script is located using CD. then type python "C# maker.py".
