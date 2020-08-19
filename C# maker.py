@@ -6,9 +6,9 @@ import subprocess
 
 #INSTRUCTIONS.
 print("\nINSTRUCTIONS:")
-print("\t.Write names without the file type.")
-print("\t.Use CMD format for typing in a directory.")
-print("\t.Make sure that the names you choose don't have any invalid characters.\n")
+print(".Write names without the file type.")
+print(".Use CMD format for typing in a directory.")
+print(".Make sure that the names you choose don't have any invalid characters.\n")
 
 #Examples.
 print("Example directory input: C:/users/ian/desktop")
@@ -36,7 +36,7 @@ print("This might take a while")
     #Linking SLN to classes.
     #Opening VScode.
 
-
+#Script.
 subprocess.run(["cd", "/", "&", "cd", f"C:/Users/{folder}", "&","mkdir", confolder, "&",
   "cd", confolder, "&", "dotnet", "new", "console", "-o", mainfolder, "&",
   "dotnet", "new", "classlib", "-n", f'{classesfolder}', "&",
