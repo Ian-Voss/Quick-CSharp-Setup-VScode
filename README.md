@@ -6,6 +6,7 @@ The script asks for input to the user. It asks for a directory in which a contai
 You will see the instructions once you run the script.
 
 Requisites:
+
   .The user must have Python 3 installed.
   
   .The user must have VScode installed.
