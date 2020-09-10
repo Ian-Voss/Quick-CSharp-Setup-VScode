@@ -24,27 +24,21 @@ slname = input("What do you want to name your sln? ")
 print("Starting process...")
 print("This might take a while")
 
-#Process:
-    #CD to the beginning.
-    #CD to specified directory.
-    #Making container folder.
-    #CD to container folder.
-    #Making main folder.
-    #Creating class folder.
-    #Creating SLN.
-    #Linking SLN to main.
-    #Linking SLN to classes.
-    #Opening VScode.
+#If you used Bash you could link projects to solutions more easily,
+#dotnet sln <solutionName>.sln add **/*.csproj,
+#Linking all projects at once.
 
-#Script.
-subprocess.run(["cd", "/", "&", "cd", f"C:/Users/{folder}", "&","mkdir", confolder, "&",
-  "cd", confolder, "&", "dotnet", "new", "console", "-o", mainfolder, "&",
-  "dotnet", "new", "classlib", "-n", f'{classesfolder}', "&",
-  "dotnet", "new", "sln", "-n", f'{slname}', "&",
-  "dotnet", "sln", f"{slname}.sln", "add", f"{mainfolder}/{mainfolder}.csproj", "&",
-  "dotnet", "sln", f"{slname}.sln", "add", f"{classesfolder}/{classesfolder}.csproj", "&",
-  "code","."],shell=True)
-
+subprocess.run(["cd", "/", "&", #CD to the beginning.
+  "cd", f"C:/Users/{folder}", "&", #CD to specified directory.
+  "mkdir", confolder, "&", #Making container folder.
+  "cd", confolder, "&", #CD to container folder.
+  "dotnet", "new", "console", "-o", mainfolder, "&", #Making main folder.
+  "dotnet", "new", "classlib", "-n", f'{classesfolder}', "&", #Creating class folder.
+  "dotnet", "new", "sln", "-n", f'{slname}', "&", #Creating SLN.
+  "dotnet", "sln", f"{slname}.sln", "add", f"{mainfolder}/{mainfolder}.csproj", "&", #Linking SLN to main.
+  "dotnet", "sln", f"{slname}.sln", "add", f"{classesfolder}/{classesfolder}.csproj", "&", #Linking SLN to classes.
+  "dotnet", "add", f"{mainfolder}/{mainfolder}.csproj", "reference", f"{classesfolder}/{classesfolder}.csproj", "&", #Adding a reference to the classes csproj.
+  "code","."],shell=True) #Opening VScode.
 
 print("Code was run successfully.")
 
