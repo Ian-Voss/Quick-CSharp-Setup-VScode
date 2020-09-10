@@ -20,3 +20,15 @@ Requisites:
 To run the script, open your cmd. then go to the directory where the script is located using CD. then type python "C# maker.py".
 
 Do let me know if you have any suggestions! 
+
+TIPS:
+
+  .Avoid naming the classes folder "class"
+  
+  .As soon as VSCode opens, a window will pop up on the bottom right. Accept it so that you run and debug.
+  
+  .Be careful when choosing your directory, since typos will not throw an error.
+  
+TO-DO:
+
+  .Throw errors when an input is wrong.
