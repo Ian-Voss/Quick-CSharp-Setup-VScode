@@ -32,3 +32,5 @@ TIPS:
 TO-DO:
 
   .Throw errors when an input is wrong.
+  .Unit testing support
+  .Allow for the creation of any amount of classes
